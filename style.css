@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.wrap {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.wrap .home {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px 60px;
+}
+.wrap .home .home__bot {
+  margin-top: 10vh;
+  width: 100%;
+  min-height: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.wrap .home .home__bot .page3__project {
+  margin: 20px;
+  width: 300px;
+  height: 350px;
+  background-color: #b5b5b5;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrap .home .home__bot .page3__project .extra_infa_page4 {
+  text-align: center;
+}
+.wrap .home .home__bot .img__page3 {
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  background-color: aqua;
+  border-bottom: 2px solid #767676;
+  cursor: pointer;
+}
+.wrap .home .home__bot .img__page3__a {
+  width: 100%;
+  height: 40%;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  background-color: aqua;
+  border-bottom: 2px solid #767676;
+  cursor: pointer;
+}
+.wrap .home .home__bot .btn__proj {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.wrap .home .home__bot .opencode {
+  width: 40%;
+  height: 80%;
+  background-color: rgb(48, 48, 48);
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrap .home .home__bot .name__proj {
+  width: 100%;
+  height: 5%;
+  font-size: 24px;
+  text-align: center;
+}
+.wrap .home .home__top {
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrap .home .home__top .home__top__right {
+  width: 65%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-right: 10%;
+}
+.wrap .home .home__top .home__top__right .home__top__right__name {
+  font-size: 28px;
+  font-weight: 600;
+}
+.wrap .home .home__top .home__top__right .home__top__right__about {
+  font-size: 24px;
+}
+.wrap .home .home__top .home__top__logo {
+  width: 250px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrap .home .home__top .home__top__logo .home__top__logo__ava {
+  width: 240px;
+  height: 240px;
+  position: absolute;
+  background-color: red;
+  z-index: 5;
+  border-radius: 50%;
+  background-image: url(./img/myFoto);
+  background-size: cover;
+  border: 1px solid black;
+}
+.wrap .home .home__top .home__top__logo .home__top__logo__kolo {
+  position: absolute;
+  z-index: 3;
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  animation: rotaMain 4s infinite;
+}
+.wrap .home .home__top .home__top__logo .home__top__logo__kolo .home__top__logo__kolo__color {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: rgb(236, 16, 16);
+  background: linear-gradient(90deg, rgb(236, 16, 16) 16%, rgb(255, 224, 10) 36%, rgb(39, 255, 0) 57%, rgb(0, 125, 255) 75%, rgb(248, 0, 255) 91%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  animation: rota 3s infinite;
+}
+.wrap .home .home__top .home__top__logo .home__top__logo__kolo .home__top__logo__kolo__color__bot {
+  width: 250px;
+  height: 30%;
+  background-color: white;
+  z-index: 5;
+  animation: rotaMainS 4s infinite;
+}
+
+@keyframes rota {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotaMain {
+  0% {
+    transform: rotate(0deg);
+  }
+  60% {
+    transform: rotate(300deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotaMainS {
+  0% {
+    height: 30%;
+  }
+  60% {
+    height: 10%;
+  }
+  95% {
+    height: 30%;
+  }
+}
+@media screen and (max-width: 950px) {
+  .wrap .home .home__top {
+    flex-direction: column;
+    height: 80vh;
+  }
+  .wrap .home .home__top .home__top__right {
+    width: 90%;
+    padding-right: 0px;
+    margin-top: 20vh;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
