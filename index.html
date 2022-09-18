@@ -10,6 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
     <div class="wrap">
@@ -26,8 +27,8 @@
                     </div>
                 </div>
                 <div class="home__top__right">
-                    <div class="home__top__right__name" data-aos="fade-left">Vitalii Myhaloiko</div>
-                    <div class="home__top__right__about" data-aos="fade-right">My name is Vitalii and I am frontend developer. I can make pixel prefect responsive designs and functionalities.
+                    <div class="home__top__right__name lang-name" data-aos="fade-left">Vitalii Myhaloiko</div>
+                    <div class="home__top__right__about lang-biography" data-aos="fade-right">My name is Vitalii and I am frontend developer. I can make pixel prefect responsive designs and functionalities.
 
                         Technologies: HTML, CSS, JS, JQUERY, JSON, SCSS, AOS, BOOTSTRAP, MATERIAL UI and more...</div>
                 </div>
@@ -36,7 +37,7 @@
                 <div class="page3__project" data-aos="fade-up">
                     <a target="_blank" class="img__page3__a" href="https://paravojik.github.io/Paint/"><img class="img__page3" src="./img/paint.PNG" alt=""></a> 
                      <div class="name__proj">Paint</div>
-                     <div class="extra_infa_page4">
+                     <div class="extra_infa_page4 lang-card1">
                         Інша версія Paint, яка побудована на canvas
                      </div>
                      <div class="btn__proj">
@@ -50,7 +51,7 @@
                      <div class="page3__project" data-aos="fade-up">
                         <a target="_blank"  class="img__page3__a" href="https://paravojik.github.io/donatebtn/"><img class="img__page3" src="./img/donate.PNG" alt=""></a> 
                          <div class="name__proj">Donate Button</div>
-                         <div class="extra_infa_page4">
+                         <div class="extra_infa_page4 lang-card2">
                              ДОПОМОЖИ ЗСУ!!!
                          </div>
                          <div class="btn__proj">
@@ -62,7 +63,7 @@
                          <div class="page3__project" data-aos="fade-up">
                             <a target="_blank"  class="img__page3__a" href="https://paravojik.github.io/tito/"><img class="img__page3" src="./img/tito.PNG" alt=""></a> 
                              <div class="name__proj">Tito</div>
-                             <div class="extra_infa_page4">
+                             <div class="extra_infa_page4 lang-card3">
                                  Замов справжні роли
                              </div>
                              <div class="btn__proj">
@@ -76,7 +77,7 @@
                              <div class="page3__project" data-aos="fade-up">
                                 <a target="_blank"  class="img__page3__a" href="https://paravojik.github.io/Kapcha/"><img class="img__page3" src="./img/capcha.PNG" alt=""></a> 
                                  <div class="name__proj">Capcha</div>
-                                 <div class="extra_infa_page4">
+                                 <div class="extra_infa_page4 lang-card4">
                                      Попробуй пройти це БОТ
                                  </div>
                                  <div class="btn__proj">
@@ -91,7 +92,7 @@
                                  <div id="page3__project1" class="page3__project" data-aos="fade-up">
                                     <a target="_blank"  class="img__page3__a" href="https://paravojik.github.io/SmachnaKava/"><img class="img__page3" src="./img/kava.PNG" alt=""></a> 
                                      <div class="name__proj">Coffe Machine</div>
-                                     <div class="extra_infa_page4">
+                                     <div class="extra_infa_page4 lang-card5">
                                          Зроби найсмачнішу каву
                                      </div>
                                      <div class="btn__proj">
@@ -104,6 +105,94 @@
         </div>
     </div>
     <script>
+           fetch('https://api.ipbase.com/json/?apikey=wjPoHW5m3j7KuZWt4qJCfPKKd3tTtL8sXbDQscnq')
+    .then(response=>{
+
+        return  response.json()
+    })
+    .then(data =>{
+        console.log(data)
+        if(data.country_code=='UA'){
+            lang='ua'
+            console.log('yes')
+        }else if(data.country_code=='PL'){
+            lang='pl'
+        }else{
+            lang='uk'  
+        }
+    })
+let lang=''
+    //        fetch('https://api.ipbase.com/json/?apikey=wjPoHW5m3j7KuZWt4qJCfPKKd3tTtL8sXbDQscnq')
+    // .then(response=>{
+
+    //     return  response.json()
+    // })
+    // .then(data =>{
+    //     console.log(data)
+    //     if(data.country_code=='UA'){
+    //         lang='ua'
+    //     }else if(data.country_code=='PL'){
+    //         lang='pl'
+    //     }
+    // })
+    let semanticCore ={
+name:{
+    'ua':'Віталій Михалойко',
+    'uk':'Vitalii Myckhaloiko',
+    'pl':'Witalij Michałojkou'
+
+},
+biography:{
+    'uk':'My name is Vitalii and I am frontend developer. I can make pixel prefect responsive designs and functionalities. Technologies: HTML, CSS, JS, JQUERY, JSON, SCSS, AOS, BOOTSTRAP, MATERIAL UI and more...',
+    'ua':'Мене звати Віталій і я фронтенд розробник. Я можу створювати ідеальні піксельні адаптивні дизайни та функції. Технології: HTML, CSS, JS, JQUERY, JSON, SCSS, AOS, BOOTSTRAP, MATERIAL UI та інші...',
+    'pl':'Nazywam się Vitalii i jestem programistą frontendowym. Potrafię tworzyć doskonałe responsywne projekty i funkcjonalności w pikselach. Technologie: HTML, CSS, JS, JQUERY, JSON, SCSS, AOS, BOOTSTRAP, MATERIAL UI i więcej...'  
+},
+card1:{
+    'ua':'Інша версія Paint, яка побудована на canvas',
+    'uk':'Another version of Paint that is built on canvas', 
+    'pl':'Kolejna wersja Painta zbudowana na płótnie'
+},
+card2:{
+    'ua':'ДОПОМОЖИ ЗСУ!!!',
+    'uk':'Help Armed Forces of Ukraine', 
+    'pl':'Pomoc Siłom Zbrojnym Ukrainy'
+},
+card3:{
+    'ua':'Замов справжні роли',
+    'uk':'Order real roles', 
+    'pl':'Zamów prawdziwe role'
+},
+card4:{
+    'ua':'Попробуй пройти це БОТ',
+    'uk':'Try to pass this BOT', 
+    'pl':'Spróbuj zdać tego bota'
+},
+card5:{
+    'ua':'Зроби найсмачнішу каву',
+    'uk':'Make the most delicious coffee',
+    'pl':'Zrób najsmaczniejszą kawę' 
+},
+}
+
+function changeUrl(){
+    location.href=window.location.pathname+'#'+lang
+    location.reload()
+}
+function changeLanguage() {
+ setTimeout(function(){
+    location.href=window.location.pathname+'#'+lang
+    let hash = (window.location.hash).substring(1);
+    console.log('no')
+    for (let key in semanticCore) {
+        $('.lang-' + key).text(semanticCore[key][hash]);
+        console.log(key);
+    }
+ },500)
+ 
+    // location.reload()
+}
+changeLanguage()
+// changeUrl()
 //         let a=0
 // page3__project1.onclick = function(){
 //     if(a==0){
