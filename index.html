@@ -17,17 +17,25 @@
 
         <div class="home">
             <div class="home__top">
-                <div class="home__top__logo">
-                    <div class="home__top__logo__ava"></div>
-                    <div class="home__top__logo__kolo">
-                        <div class="home__top__logo__kolo__color">
-                            
+                <div class="home__top__left">
+                    <div class="home__top__logo">
+                        <div class="home__top__logo__ava"></div>
+                        <div class="home__top__logo__kolo">
+                            <div class="home__top__logo__kolo__color">
+                                
+                            </div>
+                         
                         </div>
-                     
+                    </div>
+                    <div class="home__top__left__social__media">
+                        <a href="mailto:muhaloiko.vitalik@gmail.com" target="_blank" class="home__top__left__social__media__med home__top__left__social__media__med__gmail"></a>
+                        <a href="https://Paravojik.t.me/" class="home__top__left__social__media__med home__top__left__social__media__med__telegram"></a>
                     </div>
                 </div>
+              
                 <div class="home__top__right">
                     <div class="home__top__right__name lang-name" data-aos="fade-left">Vitalii Myhaloiko</div>
+                    <div class="home__top__right__pos lang-pos" id="home__top__right__pos">I'm Front End Developer</div>
                     <div class="home__top__right__about lang-biography" data-aos="fade-right">My name is Vitalii and I am frontend developer. I can make pixel prefect responsive designs and functionalities.
 
                         Technologies: HTML, CSS, JS, JQUERY, JSON, SCSS, AOS, BOOTSTRAP, MATERIAL UI and more...</div>
@@ -104,7 +112,16 @@
             </div>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
+        let textOfTyped;
+     let typed2 = new Typed('#home__top__right__pos', {
+    strings: ["I'm Front End Developer"],
+    typeSpeed: 30,
+    backSpeed: 0,
+    fadeOut: true,
+    loop: true
+  });
            fetch('https://api.ipbase.com/json/?apikey=wjPoHW5m3j7KuZWt4qJCfPKKd3tTtL8sXbDQscnq')
     .then(response=>{
 
@@ -142,6 +159,7 @@ name:{
     'pl':'Witalij Michałojkou'
 
 },
+
 biography:{
     'uk':'My name is Vitalii and I am frontend developer. I can make pixel prefect responsive designs and functionalities. Technologies: HTML, CSS, JS, JQUERY, JSON, SCSS, AOS, BOOTSTRAP, MATERIAL UI and more...',
     'ua':'Мене звати Віталій і я фронтенд розробник. Я можу створювати ідеальні піксельні адаптивні дизайни та функції. Технології: HTML, CSS, JS, JQUERY, JSON, SCSS, AOS, BOOTSTRAP, MATERIAL UI та інші...',
@@ -183,12 +201,44 @@ function changeLanguage() {
     location.href=window.location.pathname+'#'+lang
     let hash = (window.location.hash).substring(1);
     console.log('no')
+    // console.log(semanticCore['pos'][hash])
+    // textOfTyped=semanticCore['pos'][hash]
     for (let key in semanticCore) {
         $('.lang-' + key).text(semanticCore[key][hash]);
         console.log(key);
     }
  },500)
- 
+ setTimeout(function(){
+    location.href=window.location.pathname+'#'+lang
+    let hash = (window.location.hash).substring(1);
+    console.log('no')
+    // textOfTyped=semanticCore['pos'][hash]
+    for (let key in semanticCore) {
+        $('.lang-' + key).text(semanticCore[key][hash]);
+        console.log(key);
+    }
+ },2500)
+ setTimeout(function(){
+    location.href=window.location.pathname+'#'+lang
+    let hash = (window.location.hash).substring(1);
+    console.log('no')
+    // // textOfTyped=semanticCore['pos'][hash]
+    // console.log(textOfTyped)
+    for (let key in semanticCore) {
+        $('.lang-' + key).text(semanticCore[key][hash]);
+        console.log(key);
+    }
+ },5000)
+ setTimeout(function(){
+    location.href=window.location.pathname+'#'+lang
+    let hash = (window.location.hash).substring(1);
+    console.log('no')
+    // textOfTyped=semanticCore['pos'][hash]
+    for (let key in semanticCore) {
+        $('.lang-' + key).text(semanticCore[key][hash]);
+        console.log(key);
+    }
+ },10000)
     // location.reload()
 }
 changeLanguage()

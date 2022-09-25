@@ -89,10 +89,37 @@
 }
 .wrap .home .home__top {
   width: 100%;
-  height: 40vh;
+  height: 45vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.wrap .home .home__top .home__top__left {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrap .home .home__top .home__top__left .home__top__left__social__media {
+  width: 40%;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrap .home .home__top .home__top__left .home__top__left__social__media .home__top__left__social__media__med {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-size: cover;
+}
+.wrap .home .home__top .home__top__left .home__top__left__social__media__med__telegram {
+  background-image: url(./img/telegram.png);
+  background-color: red;
+}
+.wrap .home .home__top .home__top__left .home__top__left__social__media__med__gmail {
+  background-image: url(./img/free-icon-gmail-720277.png);
 }
 .wrap .home .home__top .home__top__right {
   width: 65%;
@@ -103,8 +130,16 @@
   align-items: flex-start;
   padding-right: 10%;
 }
-.wrap .home .home__top .home__top__right .home__top__right__name {
+.wrap .home .home__top .home__top__right .typed-cursor {
+  display: none;
+}
+.wrap .home .home__top .home__top__right .home__top__right__pos {
   font-size: 28px;
+  font-weight: 600;
+  width: 100%;
+}
+.wrap .home .home__top .home__top__right .home__top__right__name {
+  font-size: 32px;
   font-weight: 600;
 }
 .wrap .home .home__top .home__top__right .home__top__right__about {
@@ -193,7 +228,7 @@
 @media screen and (max-width: 950px) {
   .wrap .home .home__top {
     flex-direction: column;
-    height: 80vh;
+    height: 120vh;
   }
   .wrap .home .home__top .home__top__right {
     width: 90%;
