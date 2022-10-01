@@ -5,13 +5,19 @@
   font-family: "Roboto", sans-serif;
 }
 
+#particles-js {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background-color: rgba(249, 104, 104, 0.597);
+}
+
 .wrap {
   width: 100%;
   min-height: 100vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: rgba(249, 104, 104, 0.597);
 }
 .wrap .home {
   width: 100%;
@@ -89,7 +95,7 @@
 }
 .wrap .home .home__top {
   width: 100%;
-  height: 45vh;
+  height: 50vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -101,9 +107,34 @@
   justify-content: space-between;
   align-items: center;
 }
+.wrap .home .home__top .home__top__left .home__top__left__change__language {
+  width: 60%;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+.wrap .home .home__top .home__top__left .home__top__left__change__language .home__top__left__change__language__icon__ua {
+  background-image: url(./img/ukraine.png);
+}
+.wrap .home .home__top .home__top__left .home__top__left__change__language .home__top__left__change__language__icon__en {
+  background-image: url(./img/united-kingdom.png);
+}
+.wrap .home .home__top .home__top__left .home__top__left__change__language .home__top__left__change__language__icon__pl {
+  background-image: url(./img/poland.png);
+}
+.wrap .home .home__top .home__top__left .home__top__left__change__language .home__top__left__change__language__icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  background-size: cover;
+  cursor: pointer;
+}
 .wrap .home .home__top .home__top__left .home__top__left__social__media {
   width: 40%;
   height: 30px;
+  z-index: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -135,6 +166,7 @@
 }
 .wrap .home .home__top .home__top__right .home__top__right__pos {
   font-size: 28px;
+  z-index: 1;
   font-weight: 600;
   width: 100%;
 }

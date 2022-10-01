@@ -13,9 +13,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
-    <div class="wrap">
+    <div class="all__part" id="particles-js"></div>
+    <div class="wrap"  >
 
-        <div class="home">
+        <div class="home" >
             <div class="home__top">
                 <div class="home__top__left">
                     <div class="home__top__logo">
@@ -30,6 +31,11 @@
                     <div class="home__top__left__social__media">
                         <a href="mailto:muhaloiko.vitalik@gmail.com" target="_blank" class="home__top__left__social__media__med home__top__left__social__media__med__gmail"></a>
                         <a href="https://Paravojik.t.me/" class="home__top__left__social__media__med home__top__left__social__media__med__telegram"></a>
+                    </div>
+                    <div class="home__top__left__change__language">
+                        <div class="home__top__left__change__language__icon home__top__left__change__language__icon__ua" id="home__top__left__change__language__icon__ua"></div>
+                        <div class="home__top__left__change__language__icon home__top__left__change__language__icon__en"></div>
+                        <div class="home__top__left__change__language__icon home__top__left__change__language__icon__pl"></div>
                     </div>
                 </div>
               
@@ -112,13 +118,25 @@
             </div>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" integrity="sha512-Kef5sc7gfTacR7TZKelcrRs15ipf7+t+n7Zh6mKNJbmW+/RRdCW9nwfLn4YX0s2nO6Kv5Y2ChqgIakaC6PW09A==" crossorigin="anonymous" referrerpolicy="no-referrer" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12" ></script>
+    <script src="app.js" ></script>
     <script>
+
+
+
+
+
+
+
+
         let textOfTyped;
      let typed2 = new Typed('#home__top__right__pos', {
     strings: ["I'm Front End Developer"],
     typeSpeed: 30,
     backSpeed: 0,
+
     fadeOut: true,
     loop: true
   });
@@ -253,7 +271,48 @@ changeLanguage()
 //     page3__project1.style.position='relative'
 // }
 //     }
-   
+
+$('.home__top__left__change__language__icon__ua').click(function(){
+    lang='ua'
+    location.href=window.location.pathname+'#'+lang
+    location.href=window.location.pathname+'#'+lang
+    let hash = (window.location.hash).substring(1);
+    console.log('no')
+    // console.log(semanticCore['pos'][hash])
+    // textOfTyped=semanticCore['pos'][hash]
+    for (let key in semanticCore) {
+        $('.lang-' + key).text(semanticCore[key][hash]);
+        console.log(key);
+    }
+})
+$('.home__top__left__change__language__icon__pl').click(function(){
+    lang='pl'
+    location.href=window.location.pathname+'#'+lang
+    location.href=window.location.pathname+'#'+lang
+    let hash = (window.location.hash).substring(1);
+    console.log('no')
+    // console.log(semanticCore['pos'][hash])
+    // textOfTyped=semanticCore['pos'][hash]
+    for (let key in semanticCore) {
+        $('.lang-' + key).text(semanticCore[key][hash]);
+        console.log(key);
+    }
+})
+$('.home__top__left__change__language__icon__en').click(function(){
+
+    lang='uk'
+    location.href=window.location.pathname+'#'+lang
+    location.href=window.location.pathname+'#'+lang
+    let hash = (window.location.hash).substring(1);
+    console.log('no')
+    // console.log(semanticCore['pos'][hash])
+    // textOfTyped=semanticCore['pos'][hash]
+    for (let key in semanticCore) {
+        $('.lang-' + key).text(semanticCore[key][hash]);
+        console.log(key);
+    }
+})
+
     </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="main.js"></script>

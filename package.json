@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "particles.js": "^2.0.0",
+    "typed.js": "^2.0.12"
+  }
+}
